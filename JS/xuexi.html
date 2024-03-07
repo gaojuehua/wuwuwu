@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<!--    <script type="text/javascript" src="script.js">/* 通过src外部引入(一旦引入外部文件就不能再编写了，即使编写也忽略) */-->
+<!--    </script>-->
+
+<!--    <script type="text/javascript">-->
+<!--       /* alert("这是一个提示");  窗口弹出一个提示*/-->
+
+<!--       /*document.write("我真帅"); 在页面是出一个内容*/-->
+
+<!--       /*在控制台输出一个内容-->
+<!--       * console.log("我在这");-->
+<!--       *  */-->
+<!--    </script>-->
+
+    <script type="text/javascript">
+        var a= 123;
+        console.log(a);
+        console.log(Number.MAX_VALUE);
+        b=a.toString();
+        console.log(typeof b);
+        c=String(a);
+        console.log(c);
+        console.log(typeof c);
+        d=Number(c);
+        console.log(d);
+        console.log(typeof d);
+
+        e="123px";
+        console.log(e);
+        console.log(typeof e);
+        console.log(parseInt(e));      //取出有效整数
+        console.log(typeof parseInt(e));
+        f="123.456";
+        console.log(parseFloat(f));     //取出有效小数
+        console.log(typeof parseFloat(f));
+
+        g="070";
+        g=parseInt(g,10)   //十进制
+        console.log(g);
+        g=parseInt(g,8);   //八进制
+        console.log(g);
+
+        h=100-"1";
+        console.log(h);
+        console.log(typeof h);
+        i=1+2+"3";
+        console.log(i);
+        console.log(typeof i);
+
+        // var j = prompt("请输入：");    //可以在提示框输入
+        // alert(j);
+
+        document.write(1+"<br />");
+        document.write(2+"<br />");
+        document.write(2+"<br />");
+        document.write("*&nbsp;&nbsp;&nbsp;&nbsp;*");  //&nbsp表示空格
+
+   /*     function hello(as){}
+        var as = {name:"123",age:"20"};  */      //函数声明(会被提前创建)
+
+   /*     var z = function(){
+            console.log("666");
+        };   //匿名函数赋值给变量
+        z();                              */      //函数表达式(不会被提前创建)
+
+
+
+        //对象
+        function fun2(){
+            return {name:"和尚"};
+        }
+        var a = fun2();
+        console.log(a.name);
+
+        // (function (){
+        //     alert("我是帅哥");
+        // })();
+        (function(a,b){
+            console.log(a);
+            console.log(b);
+        })(123,234);      //立即执行函数
+
+   /*     var obj ={
+            name:"qwe",
+            age:20,
+            gender:"男"
+        }
+        for( var n in obj){
+            console.log(n);          //属性名
+            console.log(obj[n]);     //属性值
+        }                        */               //能够列出属性中的属性名和属性值
+
+        //作用域
+
+
+
+    </script>
+</head>
+<body>
+<!--    <button onclick="alert('点我干嘛');">点我一下</button>-->
+<!--    <a href="javascript:alert('你咋这么爱点我')">点一下</a>/*   href超链接  */-->
+
+</body>
+</html>

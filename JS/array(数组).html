@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+  let arr=[]
+  console.log(arr)
+  let arr1=new Array()
+  console.log(arr1)
+  arr1[1]='xxx'
+  console.log(arr1)
+  console.log(arr1[0])
+
+  arr1.push('我是帅哥')  //数组元素新增
+  console.log(arr1)
+  arr1[2]= true
+  console.log(arr1)
+  console.log(arr1.length)
+
+  //删除数组元素
+  arr1.splice(0,1)    //splice从0开始删除一个
+  console.log(arr1)
+  arr1.shift()       //从头切除一个
+  console.log(arr1)
+  arr1.pop()         //从尾部切除一个
+  console.log(arr1)
+
+  let arrnew=[1,2,3,4,5,6,7]
+  let arrm=arrnew.slice(1,3)    //截取左闭右开原则
+  let arrm1=arrnew.slice(1)
+  console.log(arrm)
+  console.log(arrm1)
+
+  let arr3=[1,4]
+  let arr4=[2,5]
+  let arr5=arr3.concat(arr4)    //数组合并
+  console.log(arr5)
+
+  let arr6='我是帅锅锅,哈哈哈哈哈'
+  console.log(arr6.split(','))
+
+  let arrB=[1,2,3,4,5]
+  console.log(arrB.join('|'))   //将数组元素变成字符串
+
+  let sortarr=[1,2,10,8,6,12,11]
+  let newsortarr=sortarr.sort((a,b)=>a-b)     //unicode编码排序    加上(a,b)=>a-b后可进行数字排序
+  console.log(newsortarr)
+
+  let reverseArr=[1,2,10,8,6,12,11]
+  console.log(reverseArr.reverse())
+  console.log(sortarr.sort((a,b)=>b-a))   //倒叙
+
+  let indexArr =[1,2,3]
+  console.log(indexArr.indexOf(2))
+
+  console.log('==================Js高级语法========================')
+  let user =[{name:'张三',age:20},{name:'张三',age:20},{name:'里斯',age:21},{name:'帅比',age:20}]
+  let newuser=[]
+  user.forEach(aaa=>{
+      if (aaa.age>20){
+          newuser.push(aaa)
+      }
+  })
+  console.log(newuser)
+
+  let user1= user.filter(aaa=>aaa.age>=20 && aaa.name.includes('比'))  //查找
+  console.log(user1)
+  console.log('-------------------------------------------')
+  //删除数组某一项
+  //let inx
+  // user.forEach((iteam,index) => {
+  //     if(iteam.name==='李四'){
+  //         inx=index
+  //     }
+  // })
+  // user.splice(inx,1)
+  // console.log(user)
+
+  //查找
+  let newrr = user.filter(v=>v.name !=='张三' && v.name !=='帅比')
+  console.log(newrr)
+  console.log(user.find(v=>v.name ==='帅比'))
+  console.log(user.findIndex(v=>v.name==='张三'))
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+  let names =user.map(v=>v.name+'我真可爱')     //将name进行列出   字符串数组
+  console.log(names)
+  let ages =user.map(v=>v.age+10)
+  console.log(ages)                           //数字数组
+  console.log(ages.sort((a,b)=>a-b))
+
+  let sum=user.reduce((pre,current)=>{
+      return pre + current.age+10
+  },0)
+  console.log(sum)
+
+  let count =user.reduce((pre,current)=>{    //name:'xxx'通过.name访问其属性
+      if(current.name in pre){
+          pre[current.name]++
+      }else{
+          pre[current.name]=1
+      }
+      return pre
+  },{})
+  console.log(count)
+
+  //json
+  let jsObj = {name:'张三'}
+  let jsonObj={"name":"张三","age":20,"man":true,"bank":{"address":"","money":10000000},"children":[
+          {"name":"小张","children":[
+                  {"name":"小小张","children":[
+                          {"name":"小小小张","children":[]}
+                      ]}
+              ]},
+          {"name":"小美"}
+      ]}
+
+  let jsonArr =[1,2,3]
+  let jsonArr1 =["1","2","3"]
+  let jsonArr2 =[true,false]
+  let jsonArr3 =[1,"1",{},[
+      {"name":"张三","arr":1}
+  ],true,false]
+
+</script>
+</body>
+</html>
