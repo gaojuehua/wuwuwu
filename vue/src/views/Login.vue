@@ -13,6 +13,12 @@
             <el-form-item prop="password">
                 <el-input prefix-icon="el-icon-lock" size="medium" show-password placeholder="请输入密码" v-model="user.password"></el-input>
             </el-form-item>
+          <el-form-item prop="role">
+<!--            <el-radio-group v-model="form.role">-->
+<!--              <el-radio label="管理员">管理员</el-radio>-->
+<!--              <el-radio label="用户">用户</el-radio>-->
+<!--            </el-radio-group>-->
+          </el-form-item>
             <el-form-item prop="code">
                 <div style="display: flex">
                     <el-input placeholder="请输入验证码" prefix-icon="el-icon-circle-check" size="medium" style="flex: 1" v-model="user.code"></el-input>

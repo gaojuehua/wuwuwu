@@ -19,6 +19,7 @@
             <el-form-item prop="role">
                 <el-radio-group v-model="user.role">
                     <el-radio label="用户"></el-radio>
+                    <el-radio label="医生"></el-radio>
                 </el-radio-group>
             </el-form-item>
             <el-form-item >
